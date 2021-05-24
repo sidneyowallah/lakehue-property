@@ -11,7 +11,11 @@
       "state": "California",
       "zip": "95389",
       "price": "605.00",
-      "categories": ["Residential", "Townhomes", "Apartment"],
+      "categories": [
+        "Residential",
+        "Townhomes",
+        "Apartment"
+      ],
       "status": "ACTIVE",
       "active": true,
       "createdAt": "2012-08-17T11:37:45.119Z",
@@ -28,7 +32,11 @@
       "state": "Utah",
       "zip": "17529-0278",
       "price": "775.00",
-      "categories": ["Townhomes", "Single-family", "Apartment"],
+      "categories": [
+        "Townhomes",
+        "Single-family",
+        "Apartment"
+      ],
       "status": "INACTIVE",
       "active": false,
       "createdAt": "2017-09-20T19:42:27.419Z",
@@ -45,7 +53,11 @@
       "state": "Alaska",
       "zip": "77992",
       "price": "419.00",
-      "categories": ["Townhomes", "Apartment", "Single-family"],
+      "categories": [
+        "Townhomes",
+        "Apartment",
+        "Single-family"
+      ],
       "status": "INACTIVE",
       "active": false,
       "createdAt": "2016-09-28T16:29:10.305Z",
@@ -62,7 +74,11 @@
       "state": "Indiana",
       "zip": "51589-2894",
       "price": "522.00",
-      "categories": ["Residential", "Single-family", "Townhomes"],
+      "categories": [
+        "Residential",
+        "Single-family",
+        "Townhomes"
+      ],
       "status": "INACTIVE",
       "active": true,
       "createdAt": "2018-08-23T23:32:30.709Z",
@@ -79,7 +95,11 @@
       "state": "Oregon",
       "zip": "17374-0053",
       "price": "959.00",
-      "categories": ["Townhomes", "Residential", "Apartment"],
+      "categories": [
+        "Townhomes",
+        "Residential",
+        "Apartment"
+      ],
       "status": "ACTIVE",
       "active": false,
       "createdAt": "2021-01-31T14:00:30.302Z",
@@ -96,7 +116,11 @@
       "state": "Colorado",
       "zip": "51192-1603",
       "price": "409.00",
-      "categories": ["Residential", "Single-family", "Condominiums"],
+      "categories": [
+        "Residential",
+        "Single-family",
+        "Condominiums"
+      ],
       "status": "INACTIVE",
       "active": true,
       "createdAt": "2015-12-03T23:40:35.411Z",
@@ -113,7 +137,11 @@
       "state": "Virginia",
       "zip": "50349-2781",
       "price": "292.00",
-      "categories": ["Single-family", "Residential", "Apartment"],
+      "categories": [
+        "Single-family",
+        "Residential",
+        "Apartment"
+      ],
       "status": "INACTIVE",
       "active": false,
       "createdAt": "2018-06-18T13:48:35.716Z",
@@ -130,7 +158,11 @@
       "state": "Wyoming",
       "zip": "23586",
       "price": "633.00",
-      "categories": ["Single-family", "Townhomes", "Residential"],
+      "categories": [
+        "Single-family",
+        "Townhomes",
+        "Residential"
+      ],
       "status": "ACTIVE",
       "active": true,
       "createdAt": "2012-02-08T18:29:13.566Z",
@@ -147,7 +179,11 @@
       "state": "New York",
       "zip": "89357",
       "price": "255.00",
-      "categories": ["Condominiums", "Townhomes", "Single-family"],
+      "categories": [
+        "Condominiums",
+        "Townhomes",
+        "Single-family"
+      ],
       "status": "INACTIVE",
       "active": false,
       "createdAt": "2013-03-15T16:13:29.921Z",
@@ -164,11 +200,57 @@
       "state": "California",
       "zip": "55706",
       "price": "722.00",
-      "categories": ["Single-family", "Townhomes", "Residential"],
+      "categories": [
+        "Single-family",
+        "Townhomes",
+        "Residential"
+      ],
       "status": "INACTIVE",
       "active": false,
       "createdAt": "2012-06-25T19:30:35.972Z",
       "updatedAt": "2020-03-26T15:47:49.950Z"
+    },
+    {
+      "id": "002",
+      "name": "test name",
+      "description": "test description",
+      "type": "test type",
+      "imageUrl": "test image",
+      "address": "test address",
+      "city": "test city",
+      "state": "test state",
+      "zip": "test price",
+      "price": "300",
+      "categories": [
+        "test category 1",
+        "test category 2",
+        "test category 3"
+      ],
+      "active": "false",
+      "status": "Active"
+    },
+    {
+      "id": "200",
+      "name": "test name",
+      "description": "test description",
+      "type": "Townhome",
+      "imageUrl": "test Image",
+      "address": "test address",
+      "city": "test city",
+      "state": "test state",
+      "zip": "test price",
+      "price": "300",
+      "categories": [
+        "test category 1",
+        "test Category 2"
+      ],
+      "active": true,
+      "appliance": [
+        "Dishwasher",
+        "Refirgerator",
+        "Microwave"
+      ],
+      "createdAt": "2021-05-24T13:47:24.839Z"
     }
   ]
 }

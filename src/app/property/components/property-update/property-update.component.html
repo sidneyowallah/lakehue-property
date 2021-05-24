@@ -1,0 +1,15 @@
+<div *ngIf="selectedProperty">
+  <h1>Update</h1>
+  <h2>{{ selectedProperty.name }}</h2>
+  <p>
+    Address:<br />{{
+      selectedProperty.address +
+        " " +
+        selectedProperty.city +
+        " " +
+        selectedProperty.state +
+        " " +
+        selectedProperty.zip
+    }}
+  </p>
+</div>
