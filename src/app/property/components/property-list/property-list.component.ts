@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DataService } from '../../../shared/services/data.service';
+import { PropertyService } from '../../services/property.service';
 import { Property } from '../../interfaces/property.interface';
 
 @Component({
@@ -9,10 +9,10 @@ import { Property } from '../../interfaces/property.interface';
 })
 export class PropertyListComponent implements OnInit {
   allProperties: Property[];
-  constructor(private dataservice: DataService) {}
+  constructor(private propertyService: PropertyService) {}
 
   ngOnInit(): void {
-    this.dataservice.getAllProperties().subscribe(
+    this.propertyService.getAllProperties().subscribe(
       (data: Property[]) => {
         this.allProperties = data;
         console.log('Properties data', this.allProperties);

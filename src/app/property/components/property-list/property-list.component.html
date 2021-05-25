@@ -1,1 +1,6 @@
-<p>property-list works!</p>
+<div *ngIf="allProperties">
+  <h1>All Products</h1>
+  <div *ngFor="let x of allProperties">
+    <a [routerLink]="['/properties/', x.id]">{{ x.name }}</a>
+  </div>
+</div>

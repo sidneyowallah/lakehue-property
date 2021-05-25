@@ -8,7 +8,9 @@ import { SharedModule } from '../shared/shared.module';
   declarations: [DashboardComponent],
   imports: [
     CommonModule,
-    RouterModule.forChild([{ path: '', component: DashboardComponent }]),
+    RouterModule.forChild([
+      { path: 'dashboard', component: DashboardComponent },
+    ]),
     SharedModule,
   ],
 })

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { DataService } from '../../../shared/services/data.service';
 import { Property } from '../../interfaces/property.interface';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { PropertyService } from '../../services/property.service';
 
 @Component({
   selector: 'lh-property-detail',
@@ -11,13 +11,20 @@ import { ActivatedRoute } from '@angular/router';
 export class PropertyDetailComponent implements OnInit {
   selectedProperty: Property;
   constructor(
+    private router: Router,
     private route: ActivatedRoute,
-    private dataservice: DataService
+    private propertyService: PropertyService
   ) {}
 
   ngOnInit(): void {
-    let propertyId = parseInt(this.route.snapshot.params['id']);
-    this.dataservice.getPropertyById(propertyId).subscribe(
+    this.route.paramMap.subscribe((params) => {
+      const propertyId = +params.get('id');
+      this.getProperty(propertyId);
+    });
+  }
+
+  getProperty(propertyId: number) {
+    this.propertyService.getPropertyById(propertyId).subscribe(
       (data: Property) => {
         this.selectedProperty = data;
         console.log('Property data', this.selectedProperty);

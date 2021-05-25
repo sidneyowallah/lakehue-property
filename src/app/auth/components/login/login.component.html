@@ -1,1 +1,15 @@
-<p>login works!</p>
+<form [formGroup]="loginForm" (ngSubmit)="login()">
+  <div>
+    <label>
+      username: <input type="text" formControlName="username" required />
+    </label>
+    <br />
+    <label>
+      password: <input type="text" formControlName="password" required />
+    </label>
+    <br />
+  </div>
+  <button type="submit" [disabled]="!loginForm.valid">Submit</button>
+  <p>Real-time data: {{ loginForm.value | json }}</p>
+  <p>Your form status is : {{ loginForm.status }}</p>
+</form>

@@ -1,1 +1,7 @@
-<p>header works!</p>
+<div>
+  <a [routerLink]="['/dashboard']">Dashboard</a> |
+  <a [routerLink]="['/properties']">Property list</a> |
+  <a [routerLink]="['/properties', 0, 'edit']">Add Property</a> |
+  <a [routerLink]="['/login']">Login</a>
+  <button type="button" (click)="logOut()">logout</button>
+</div>

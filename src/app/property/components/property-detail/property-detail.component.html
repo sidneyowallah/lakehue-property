@@ -11,4 +11,10 @@
         selectedProperty.zip
     }}
   </p>
+  <button
+    type="button"
+    [routerLink]="['/properties/', selectedProperty.id, 'edit']"
+  >
+    Edit
+  </button>
 </div>

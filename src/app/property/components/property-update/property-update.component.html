@@ -13,3 +13,98 @@
     }}
   </p>
 </div>
+<div>
+  <form novalidate [formGroup]="propertyForm">
+    <div>
+      <label> id: <input type="text" formControlName="id" required /> </label>
+      <br />
+      <label>
+        name: <input type="text" formControlName="name" required />
+      </label>
+      <br />
+      <label>
+        description: <input type="text" formControlName="description" />
+      </label>
+      <br />
+      <label>
+        Type:
+        <select formControlName="type">
+          <option [ngValue]="null" disabled>Property Type</option>
+          <option *ngFor="let x of propertyType" [ngValue]="x">{{ x }}</option>
+        </select>
+      </label>
+      <br />
+      <label> image: <input type="text" formControlName="imageUrl" /> </label>
+      <br />
+      <label> address: <input type="text" formControlName="address" /> </label>
+      <br />
+      <label> city: <input type="text" formControlName="city" /> </label> <br />
+      <label> state: <input type="text" formControlName="state" /> </label>
+      <br />
+      <label> zip: <input type="text" formControlName="zip" /> </label> <br />
+      <label> price: <input type="text" formControlName="price" /> </label>
+      <br />
+      <label>
+        Status:
+        <input
+          type="radio"
+          [value]="true"
+          formControlName="active"
+          id="active"
+        />
+        <label for="active">Active</label>
+        <input
+          type="radio"
+          [value]="false"
+          formControlName="active"
+          id="inactive"
+        />
+        <label for="inactive">Inactive</label>
+      </label>
+      <div formArrayName="appliance">
+        <h3>Appliances</h3>
+        <div *ngFor="let x of applianceList">
+          <label>
+            <input
+              type="checkbox"
+              [value]="x"
+              (change)="onCheckboxChange($event)"
+            />
+            {{ x }}
+          </label>
+        </div>
+      </div>
+
+      <div formArrayName="categories">
+        <h3>Categories</h3>
+        <div *ngFor="let category of categories.controls; let i = index">
+          <!-- The repeated category template -->
+          <label>
+            Category:
+            <input type="text" [formControlName]="i" />
+          </label>
+        </div>
+        <button type="button" (click)="addCategory()">Add Category</button>
+      </div>
+    </div>
+
+    <button
+      *ngIf="selectedProperty"
+      type="button"
+      [routerLink]="['/properties/', selectedProperty.id]"
+    >
+      back
+    </button>
+    <button
+      type="button"
+      (click)="saveProperty()"
+      [disabled]="!propertyForm.valid"
+    >
+      Save
+    </button>
+    <button type="button" (click)="deleteProperty()">Delete</button>
+
+    <p>Real-time data: {{ propertyForm.value | json }}</p>
+    <p>Your form status is : {{ propertyForm.status }}</p>
+  </form>
+</div>

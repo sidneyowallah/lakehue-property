@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
-import { Property } from '../../property/interfaces/property.interface';
+import { Property } from '../interfaces/property.interface';
 
 @Injectable({
   providedIn: 'root',
 })
-export class DataService {
+export class PropertyService {
   API_URL = 'http://localhost:3020/properties';
 
   constructor(private http: HttpClient) {}
